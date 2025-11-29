@@ -31,6 +31,17 @@ def power(a, b):
     """Raise a to the power of b."""
     return a * b
 
+def calculate_mean(numbers):
+    """Calculate the mean of a list of numbers."""
+    return sum(numbers) / len(numbers)
+
+def calculate_median(numbers):
+    """Calculate the median of a list of numbers."""
+    sorted_nums = sorted(numbers)
+    n = len(sorted_nums)
+    if n % 2 == 0:
+        return (sorted_nums[n//2 - 1] + sorted_nums[n//2]) / 2
+    return sorted_nums[n//2]
 
 def main():
     """Run calculator demo."""
@@ -44,6 +55,12 @@ def main():
     result = add(10, 20)
     print(f"{Fore.GREEN}10 + 20 = {reslt}{Style.RESET_ALL}")
 
+    # Statistics demo
+    print("\n=== Statistics Demo ===")
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print(f"Numbers: {numbers}")
+    print(f"Mean: {calculate_mean(numbers)}")
+    print(f"Median: {calculate_median(numbers)}")
 
 if __name__ == "__main__":
     main()
