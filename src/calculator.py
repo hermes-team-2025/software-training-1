@@ -44,6 +44,10 @@ def main():
     result = add(10, 20)
     print(f"{Fore.GREEN}10 + 20 = {reslt}{Style.RESET_ALL}")
 
+    # Interactive mode
+    print("\n=== Interactive Mode ===")
+    print("Calculator is ready for interactive use!")
+    print("Type 'help' for available commands.")
 
 if __name__ == "__main__":
     main()
