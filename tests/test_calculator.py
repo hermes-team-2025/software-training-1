@@ -8,7 +8,7 @@ import os
 # Add parent directory to path to import calculator
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.calculator import add, subtract, multiply, divide, power
+from src.calculator import add, calculate_expr, subtract, multiply, divide, power
 
 
 def test_add():
@@ -41,6 +41,13 @@ def test_power():
     assert power(10, 0) == 1
     assert power(2, 10) == 1024
 
+def test_calculate_expr():
+    assert calculate_expr("2 + 3") == 5
+    assert calculate_expr("5 - 2") == 3
+    assert calculate_expr("4 * 2") == 8
+    assert calculate_expr("8 / 4") == 2
+    assert calculate_expr("3 ^ 3") == 27
+
 
 if __name__ == "__main__":
     print("Running tests...")
@@ -49,5 +56,6 @@ if __name__ == "__main__":
     test_multiply()
     test_divide()
     test_power()
+    test_calculate_expr()
     print("All tests passed!")
 
