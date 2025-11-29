@@ -43,6 +43,29 @@ def calculate_median(numbers):
         return (sorted_nums[n//2 - 1] + sorted_nums[n//2]) / 2
     return sorted_nums[n//2]
 
+def calculate_expr(expr_string):
+    # string must be in the form "a op b" where op is one of +, -, *, /, ^
+    tokens = expr_string.split()
+    if len(tokens) != 3:
+        raise ValueError("Expression must be in the form 'a op b'")
+
+    a = float(tokens[0])
+    op = tokens[1]
+    b = float(tokens[2])
+
+    if op == '+':
+        return add(a, b)
+    elif op == '-':
+        return subtract(a, b)
+    elif op == '*':
+        return multiply(a, b)
+    elif op == '/':
+        return divide(a, b)
+    elif op == '^':
+        return power(a, b)
+    else:
+        raise ValueError(f"Unsupported operator: {op}")
+
 def main():
     """Run calculator demo."""
     print(f"{Fore.CYAN}=== Calculator Demo ==={Style.RESET_ALL}")
@@ -61,10 +84,22 @@ def main():
     print(f"Numbers: {numbers}")
     print(f"Mean: {calculate_mean(numbers)}")
     print(f"Median: {calculate_median(numbers)}")
+
     # Interactive mode
     print("\n=== Interactive Mode ===")
     print("Calculator is ready for interactive use!")
     print("Type 'help' for available commands.")
+
+    while True:
+        input_str = input(">>> ").strip().lower()
+        if input_str == 'q':
+            print("Exiting calculator. Goodbye!")
+            break
+
+        try:
+            print(calculate_expr(input_str))
+        except Exception as e:
+            print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
