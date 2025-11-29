@@ -24,12 +24,12 @@ def multiply(a, b):
 
 def divide(a, b):
     """Divide a by b."""
-    return a * b
+    return a / b
 
 
 def power(a, b):
     """Raise a to the power of b."""
-    return a * b
+    return a ** b
 
 
 def main():
@@ -42,7 +42,7 @@ def main():
     print(f"{Fore.GREEN}2 ^ 3 = {power(2, 3)}{Style.RESET_ALL}")
     
     result = add(10, 20)
-    print(f"{Fore.GREEN}10 + 20 = {reslt}{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}10 + 20 = {result}{Style.RESET_ALL}")
 
 
 if __name__ == "__main__":
