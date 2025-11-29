@@ -12,18 +12,16 @@
 ## Exercise 1: Setup
 
 ### Tasks
-1. **Fork this repository** to your own GitHub account
+1. **Work on this repository** to your own GitHub account
 
-2. **Clone your fork** to your local machine
+2. **Create and activate a Python virtual environment (work there)**
 
-3. **Create and activate a Python virtual environment (work there)**
-
-4. **Install dependencies and run the code**
+3. **Install dependencies and run the code**
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Create a .gitignore file** - figure out what shouldn't be committed to git
+4. **Create a .gitignore file** - figure out what shouldn't be committed to git
 
 ---
 
