@@ -44,6 +44,13 @@ def main():
     result = add(10, 20)
     print(f"{Fore.GREEN}10 + 20 = {reslt}{Style.RESET_ALL}")
 
+    # Statistics demo
+    print("\n=== Statistics Demo ===")
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print(f"Numbers: {numbers}")
+    print(f"Mean: {calculate_mean(numbers)}")
+    print(f"Median: {calculate_median(numbers)}")
+
     # Interactive mode
     print("\n=== Interactive Mode ===")
     print("Calculator is ready for interactive use!")
