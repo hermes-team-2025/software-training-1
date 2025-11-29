@@ -61,6 +61,10 @@ def main():
     print(f"Numbers: {numbers}")
     print(f"Mean: {calculate_mean(numbers)}")
     print(f"Median: {calculate_median(numbers)}")
+    # Interactive mode
+    print("\n=== Interactive Mode ===")
+    print("Calculator is ready for interactive use!")
+    print("Type 'help' for available commands.")
 
 if __name__ == "__main__":
     main()
